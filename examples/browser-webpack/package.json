@@ -3,12 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "rm -rf dist && webpack && npx http-server . -o"
+    "build": "rm -rf dist && webpack",
+    "start": "npm run build && npx http-server . -o"
   },
   "dependencies": {
     "uuid": "github:ctavan/uuid-esm#master"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-loader": "^8.0.6",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9"
   }
